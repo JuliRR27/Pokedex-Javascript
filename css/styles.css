@@ -1,62 +1,94 @@
-form {
-    width: 200px;
-    margin: 20px auto;
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxanium', cursive;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
+body {
+  text-align: center;
+  background: linear-gradient(to bottom, #6ab7f5, #fff);
+  min-height: 100vh;
 }
 
-.poke-card {
-    position: relative;
-    height: fit-content;
-    font-family: 'Roboto Mono', monospace;
-    max-width: 300px;
-    border-radius: 4px;
-    color: #000;
-    text-align: center;
-    padding: 10px;
-    margin: 0 auto;
-    background-color: #FFF;
-    border: 1px solid black;
+main {
+  display: inline-block;
+  margin-top: 2%;
+  padding: 15px;
+  position: relative;
 }
 
-.poke-card::before {
-    content: '';
-    background: radial-gradient(black 33%, transparent 33%);
-    background-size: 3px 3px;
-    border-radius: 4px;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    z-index: -1;
+.pokedex {
+  width: 100%;
+  max-width: 425px;
 }
 
-.img-container {
-    position: relative;
-    width: 180px;
-    margin: 10px auto;
+.pokemon__image {
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-63%, 20%);
+  height: 18%;
 }
 
-.poke-stats div {
-    display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-    padding: 5px;
-    font-size: 18px;
+.pokemon__data {
+  position: absolute;
+  font-weight: 600;
+  color: #aaa;
+  top: 54.5%;
+  right: 27%;
+  font-size: clamp(8px, 5vw, 25px);
 }
 
-.poke-types div {
-    padding: 5px;
-    margin: 5px;
-    border-radius: 4px;
-    border: 1px dashed black;
+.pokemon__name {
+  color: #3a444d;
+  text-transform: capitalize;
 }
 
-.poke-img {
-    width: 180px;
-    border-radius: 50%;
+.form {
+  position: absolute;
+  width: 65%;
+  top: 65%;
+  left: 13.5%;
+}
+
+.input__search {
+  width: 100%;
+  padding: 4%;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #3a444d;
+  font-size: clamp(8px, 5vw, 1rem);
+  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 65%;
+  transform: translate(-57%, 0);
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  width: 50%;
+  padding: 4%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: clamp(8px, 5vw, 1rem);
+  font-weight: 600;
+  color: white;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+.button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 0.9rem;
 }

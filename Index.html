@@ -2,27 +2,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/pokeball-icon.png" type="image/x-icon">
-    <script src="js/main.js" type="text/javascript" defer></script>
-    <link href="css/styles.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Links -->
+  <link rel="shortcut icon" href="img/pokeball-icon.png" type="image/x-icon">
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <!-- Main JS -->
+  <script src="js/main.js" type="text/javascript" defer></script>
+
+  <title>Pokédex</title>
 </head>
 <body>
-    <form action="" onsubmit="searchPokemon(event)">
-        <input type="text" name="pokemon" autocomplete="off">
+  
+  <main>
+    <img src="#" alt="pokemon" class="pokemon__image">
+
+    <h1 class="pokemon__data">
+      <span class="pokemon__number"></span> -
+      <span class="pokemon__name"></span>
+    </h1>
+
+    <form class="form">
+      <input
+        type="search"
+        class="input__search"
+        placeholder="Name or Number"
+        required
+      />
     </form>
-    <div data-poke-card class="poke-card">
-        <div data-poke-name>Pokedex</div>
-        <div data-poke-img-container class="img-container">
-            <img data-poke-img class="poke-img" src="./img/poke-shadow.png"/>
-        </div>
-        <div data-poke-id></div>
-        <div data-poke-types class="poke-types"></div>
-        <div data-poke-stats class="poke-stats"></div>
+
+    <div class="buttons">
+      <button class="button btn-prev">Prev &lt;</button>
+      <button class="button btn-next">Next &gt;</button>
     </div>
+
+    <img src="img/pokedex.png" alt="pokedex" class="pokedex">
+  </main>
+
 </body>
 </html>
