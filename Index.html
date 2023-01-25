@@ -16,30 +16,19 @@
 </head>
 <body>
   
-  <main>
-    <img src="#" alt="pokemon" class="pokemon__image">
+  <div class="list-container">
+    <h1>Pokemon</h1>
+    <ul class="pokemon-list">
+    </ul>
+    <p>Discovered: <span id="pokedex-count"></span></p>
+    <p>Undiscovered: <span id="pokedex-undisc"></span></p>
+  </div>
 
-    <h1 class="pokemon__data">
-      <span class="pokemon__number"></span> -
-      <span class="pokemon__name"></span>
-    </h1>
+  <div class="lists__pokemons" id="lists__pokemons">
+        
+  </div>
 
-    <form class="form">
-      <input
-        type="search"
-        class="input__search"
-        placeholder="Name or Number"
-        required
-      />
-    </form>
-
-    <div class="buttons">
-      <button class="button btn-prev">Prev &lt;</button>
-      <button class="button btn-next">Next &gt;</button>
-    </div>
-
-    <img src="img/pokedex.png" alt="pokedex" class="pokedex">
-  </main>
+  <div class="buttons" id="buttons"></div>
 
 </body>
 </html>

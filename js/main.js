@@ -1,59 +1,98 @@
-const pokemonName = document.querySelector('.pokemon__name');
-const pokemonNumber = document.querySelector('.pokemon__number');
-const pokemonImage = document.querySelector('.pokemon__image');
+var pokemonArray = ['bulbasaur',
+                   'ivysaur',
+                   'venusaur',
+                   'squirtle',
+                   'wartortle',
+                   'blastoise',
+                   'charmander',
+                   'charmeleon',
+                   'charizard',];
 
-const form = document.querySelector('.form');
-const input = document.querySelector('.input__search');
-const buttonPrev = document.querySelector('.btn-prev');
-const buttonNext = document.querySelector('.btn-next');
+var pokemonList = document.querySelector('.pokemon-list');
 
-let searchPokemon = 1;
-
-const fetchPokemon = async (pokemon) => {
-  const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
-
-  if (APIResponse.status === 200) {
-    const data = await APIResponse.json();
-    return data;
-  }
+for (var i in pokemonArray) {
+  var liNode = document.createElement('li');
+  var pokemonNode = document.createTextNode(pokemonArray[i]);
+  liNode.appendChild(pokemonNode);
+  pokemonList.appendChild(liNode);
 }
 
-const renderPokemon = async (pokemon) => {
-
-  pokemonName.innerHTML = 'Loading...';
-  pokemonNumber.innerHTML = '';
-
-  const data = await fetchPokemon(pokemon);
-
-  if (data) {
-    pokemonImage.style.display = 'block';
-    pokemonName.innerHTML = data.name;
-    pokemonNumber.innerHTML = data.id;
-    pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
-    input.value = '';
-    searchPokemon = data.id;
-  } else {
-    pokemonImage.style.display = 'none';
-    pokemonName.innerHTML = 'Not found :c';
-    pokemonNumber.innerHTML = '';
+var pokedex = {
+  known_pokemon: pokemonArray,
+  add_new: function(addPokemon) {
+    addNewPokemonToList(addPokemon);
+  },
+  discovered: function() {
+    document.querySelector('#pokedex-count').innerHTML = pokedex.known_pokemon.length;
+  },
+  undiscovered: function() {
+    var undiscPokemon = 151 - pokedex.known_pokemon.length;
+    document.querySelector('#pokedex-undisc').innerHTML = undiscPokemon;
   }
+};
+
+pokedex.add_new('beedrill');
+
+pokedex.discovered();
+pokedex.undiscovered();
+
+function addNewPokemonToList(newPokemon) {
+  pokedex.known_pokemon.push(newPokemon);
+ pokemonList.appendChild(document.createElement('li')).appendChild(document.createTextNode(pokedex.known_pokemon[pokedex.known_pokemon.length-1]));
 }
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  renderPokemon(input.value.toLowerCase());
-});
+const lists__pokemons = document.getElementById('lists__pokemons')
+const buttons = document.getElementById('buttons')
+let urlPokemon = ' https://pokeapi.co/api/v2/pokemon'
+let btnNext;
+let btnPrevious;
+let templateHtml;
+console.log('⏮⏩')
 
-buttonPrev.addEventListener('click', () => {
-  if (searchPokemon > 1) {
-    searchPokemon -= 1;
-    renderPokemon(searchPokemon);
-  }
-});
+const GetPokemons = async (url) => {
+    try {
+        const response = await fetch(url)
+        const results = await response.json();
+        console.log(results)
+        DataPokemons(results.results)
 
-buttonNext.addEventListener('click', () => {
-  searchPokemon += 1;
-  renderPokemon(searchPokemon);
-});
+        btnNext=results.next ? `<button class="btn" data-url=${results.next}>⏩</button>` : ''
+        btnPrevious=results.previous ? `<button class="btn" data-url=${results.previous}>⏮</button>` : ''
+        buttons.innerHTML=btnPrevious + " " + btnNext
+        
 
-renderPokemon(searchPokemon);
+    } catch (error) {
+        console.log(error)
+    }
+}
+GetPokemons(urlPokemon)
+
+const DataPokemons = async (data) => {
+    lists__pokemons.innerHTML = '';
+    try {
+        for (let index of data) {
+
+            const resp = await fetch(index.url)
+            const resul = await resp.json();
+            console.log(resul)
+            templateHtml=`
+            <div class="pokemon__img">
+            <img src=${resul.sprites.other.dream_world.front_default} alt=${resul.name}/>
+            <p>${resul.name}</p>
+            </div>
+            `
+            lists__pokemons.innerHTML+=templateHtml
+        }
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+buttons.addEventListener('click',(e)=>{
+    if(e.target.matches('.btn')){
+        let value=e.target.dataset.url
+        console.log(value)
+        GetPokemons(value)
+    }
+})
