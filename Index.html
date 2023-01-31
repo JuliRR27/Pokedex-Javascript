@@ -1,34 +1,1377 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Links -->
+  <meta charset="utf-8">
+  <title>¡Hazte con todos!</title>
   <link rel="shortcut icon" href="img/pokeball-icon.png" type="image/x-icon">
-  <link href="css/styles.css" rel="stylesheet" />
-
-  <!-- Main JS -->
-  <script src="js/main.js" type="text/javascript" defer></script>
-
-  <title>Pokédex</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script type="text/javascript" src="src/pokemon.js"></script>
+  <script type="text/javascript" src="src/index.js"></script>
 </head>
+
 <body>
-  
-  <div class="list-container">
-    <h1>Pokemon</h1>
-    <ul class="pokemon-list">
-    </ul>
-    <p>Discovered: <span id="pokedex-count"></span></p>
-    <p>Undiscovered: <span id="pokedex-undisc"></span></p>
+  <div id="container">
+    <img id="pokemon-logo" src="img/pokemon.png" alt="">
+    <form id="pokemon-search-form" class="" action="" method="">
+      <input id="pokemon-search-input" type="text" name="">
+    </form>
+
+    <div id="pokemon-container">
+      <div id="pokemon-container">
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">ivysaur</h1>
+            <div class="pokemon-image">
+              <img data-id="2" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">venusaur</h1>
+            <div class="pokemon-image">
+              <img data-id="3" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">charmander</h1>
+            <div class="pokemon-image">
+              <img data-id="5" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">charmeleon</h1>
+            <div class="pokemon-image">
+              <img data-id="6" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">charizard</h1>
+            <div class="pokemon-image">
+              <img data-id="7" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">squirtle</h1>
+            <div class="pokemon-image">
+              <img data-id="10" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">wartortle</h1>
+            <div class="pokemon-image">
+              <img data-id="11" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">blastoise</h1>
+            <div class="pokemon-image">
+              <img data-id="12" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">caterpie</h1>
+            <div class="pokemon-image">
+              <img data-id="14" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">metapod</h1>
+            <div class="pokemon-image">
+              <img data-id="15" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">butterfree</h1>
+            <div class="pokemon-image">
+              <img data-id="16" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">weedle</h1>
+            <div class="pokemon-image">
+              <img data-id="17" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">kakuna</h1>
+            <div class="pokemon-image">
+              <img data-id="18" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">beedrill</h1>
+            <div class="pokemon-image">
+              <img data-id="19" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">pidgey</h1>
+            <div class="pokemon-image">
+              <img data-id="21" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">pidgeotto</h1>
+            <div class="pokemon-image">
+              <img data-id="22" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">pidgeot</h1>
+            <div class="pokemon-image">
+              <img data-id="23" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">rattata</h1>
+            <div class="pokemon-image">
+              <img data-id="25" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">raticate</h1>
+            <div class="pokemon-image">
+              <img data-id="26" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">spearow</h1>
+            <div class="pokemon-image">
+              <img data-id="27" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">fearow</h1>
+            <div class="pokemon-image">
+              <img data-id="28" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">ekans</h1>
+            <div class="pokemon-image">
+              <img data-id="29" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">arbok</h1>
+            <div class="pokemon-image">
+              <img data-id="30" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">pikachu</h1>
+            <div class="pokemon-image">
+              <img data-id="32" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">raichu</h1>
+            <div class="pokemon-image">
+              <img data-id="39" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">sandshrew</h1>
+            <div class="pokemon-image">
+              <img data-id="40" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">sandslash</h1>
+            <div class="pokemon-image">
+              <img data-id="41" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">nidoran-f</h1>
+            <div class="pokemon-image">
+              <img data-id="42" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">nidorina</h1>
+            <div class="pokemon-image">
+              <img data-id="43" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">nidoqueen</h1>
+            <div class="pokemon-image">
+              <img data-id="44" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">nidoran-m</h1>
+            <div class="pokemon-image">
+              <img data-id="45" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">nidorino</h1>
+            <div class="pokemon-image">
+              <img data-id="46" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">nidoking</h1>
+            <div class="pokemon-image">
+              <img data-id="47" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">clefairy</h1>
+            <div class="pokemon-image">
+              <img data-id="49" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">clefable</h1>
+            <div class="pokemon-image">
+              <img data-id="50" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">vulpix</h1>
+            <div class="pokemon-image">
+              <img data-id="51" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">ninetales</h1>
+            <div class="pokemon-image">
+              <img data-id="52" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">jigglypuff</h1>
+            <div class="pokemon-image">
+              <img data-id="54" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">wigglytuff</h1>
+            <div class="pokemon-image">
+              <img data-id="55" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">zubat</h1>
+            <div class="pokemon-image">
+              <img data-id="56" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">golbat</h1>
+            <div class="pokemon-image">
+              <img data-id="57" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">oddish</h1>
+            <div class="pokemon-image">
+              <img data-id="59" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">gloom</h1>
+            <div class="pokemon-image">
+              <img data-id="60" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">vileplume</h1>
+            <div class="pokemon-image">
+              <img data-id="61" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">paras</h1>
+            <div class="pokemon-image">
+              <img data-id="63" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">parasect</h1>
+            <div class="pokemon-image">
+              <img data-id="64" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">venonat</h1>
+            <div class="pokemon-image">
+              <img data-id="65" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">venomoth</h1>
+            <div class="pokemon-image">
+              <img data-id="66" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">diglett</h1>
+            <div class="pokemon-image">
+              <img data-id="67" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">dugtrio</h1>
+            <div class="pokemon-image">
+              <img data-id="68" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">meowth</h1>
+            <div class="pokemon-image">
+              <img data-id="69" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">persian</h1>
+            <div class="pokemon-image">
+              <img data-id="70" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">psyduck</h1>
+            <div class="pokemon-image">
+              <img data-id="71" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">golduck</h1>
+            <div class="pokemon-image">
+              <img data-id="72" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">mankey</h1>
+            <div class="pokemon-image">
+              <img data-id="73" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">primeape</h1>
+            <div class="pokemon-image">
+              <img data-id="74" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">growlithe</h1>
+            <div class="pokemon-image">
+              <img data-id="75" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">arcanine</h1>
+            <div class="pokemon-image">
+              <img data-id="76" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">poliwag</h1>
+            <div class="pokemon-image">
+              <img data-id="77" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">poliwhirl</h1>
+            <div class="pokemon-image">
+              <img data-id="78" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">poliwrath</h1>
+            <div class="pokemon-image">
+              <img data-id="79" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">abra</h1>
+            <div class="pokemon-image">
+              <img data-id="81" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">kadabra</h1>
+            <div class="pokemon-image">
+              <img data-id="82" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">alakazam</h1>
+            <div class="pokemon-image">
+              <img data-id="83" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">machop</h1>
+            <div class="pokemon-image">
+              <img data-id="85" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">machoke</h1>
+            <div class="pokemon-image">
+              <img data-id="86" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">machamp</h1>
+            <div class="pokemon-image">
+              <img data-id="87" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">bellsprout</h1>
+            <div class="pokemon-image">
+              <img data-id="88" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">weepinbell</h1>
+            <div class="pokemon-image">
+              <img data-id="89" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">victreebel</h1>
+            <div class="pokemon-image">
+              <img data-id="90" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">tentacool</h1>
+            <div class="pokemon-image">
+              <img data-id="91" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">tentacruel</h1>
+            <div class="pokemon-image">
+              <img data-id="92" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">geodude</h1>
+            <div class="pokemon-image">
+              <img data-id="93" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">graveler</h1>
+            <div class="pokemon-image">
+              <img data-id="94" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">golem</h1>
+            <div class="pokemon-image">
+              <img data-id="95" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">ponyta</h1>
+            <div class="pokemon-image">
+              <img data-id="96" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">rapidash</h1>
+            <div class="pokemon-image">
+              <img data-id="97" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">slowpoke</h1>
+            <div class="pokemon-image">
+              <img data-id="98" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">slowbro</h1>
+            <div class="pokemon-image">
+              <img data-id="99" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">magnemite</h1>
+            <div class="pokemon-image">
+              <img data-id="102" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">magneton</h1>
+            <div class="pokemon-image">
+              <img data-id="103" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">farfetchd</h1>
+            <div class="pokemon-image">
+              <img data-id="105" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">doduo</h1>
+            <div class="pokemon-image">
+              <img data-id="106" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">dodrio</h1>
+            <div class="pokemon-image">
+              <img data-id="107" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">seel</h1>
+            <div class="pokemon-image">
+              <img data-id="108" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">dewgong</h1>
+            <div class="pokemon-image">
+              <img data-id="109" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">grimer</h1>
+            <div class="pokemon-image">
+              <img data-id="110" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">muk</h1>
+            <div class="pokemon-image">
+              <img data-id="111" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">shellder</h1>
+            <div class="pokemon-image">
+              <img data-id="112" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">cloyster</h1>
+            <div class="pokemon-image">
+              <img data-id="113" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">gastly</h1>
+            <div class="pokemon-image">
+              <img data-id="114" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">haunter</h1>
+            <div class="pokemon-image">
+              <img data-id="115" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">gengar</h1>
+            <div class="pokemon-image">
+              <img data-id="116" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">onix</h1>
+            <div class="pokemon-image">
+              <img data-id="118" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">drowzee</h1>
+            <div class="pokemon-image">
+              <img data-id="121" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">hypno</h1>
+            <div class="pokemon-image">
+              <img data-id="122" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">krabby</h1>
+            <div class="pokemon-image">
+              <img data-id="123" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">kingler</h1>
+            <div class="pokemon-image">
+              <img data-id="124" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">voltorb</h1>
+            <div class="pokemon-image">
+              <img data-id="125" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">electrode</h1>
+            <div class="pokemon-image">
+              <img data-id="126" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">exeggcute</h1>
+            <div class="pokemon-image">
+              <img data-id="127" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">exeggutor</h1>
+            <div class="pokemon-image">
+              <img data-id="128" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">cubone</h1>
+            <div class="pokemon-image">
+              <img data-id="129" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">marowak</h1>
+            <div class="pokemon-image">
+              <img data-id="130" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">hitmonlee</h1>
+            <div class="pokemon-image">
+              <img data-id="132" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">hitmonchan</h1>
+            <div class="pokemon-image">
+              <img data-id="133" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">lickitung</h1>
+            <div class="pokemon-image">
+              <img data-id="135" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">koffing</h1>
+            <div class="pokemon-image">
+              <img data-id="137" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">weezing</h1>
+            <div class="pokemon-image">
+              <img data-id="138" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">rhyhorn</h1>
+            <div class="pokemon-image">
+              <img data-id="139" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">rhydon</h1>
+            <div class="pokemon-image">
+              <img data-id="140" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">chansey</h1>
+            <div class="pokemon-image">
+              <img data-id="143" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">tangela</h1>
+            <div class="pokemon-image">
+              <img data-id="145" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">kangaskhan</h1>
+            <div class="pokemon-image">
+              <img data-id="147" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">horsea</h1>
+            <div class="pokemon-image">
+              <img data-id="149" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">seadra</h1>
+            <div class="pokemon-image">
+              <img data-id="150" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">goldeen</h1>
+            <div class="pokemon-image">
+              <img data-id="152" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">seaking</h1>
+            <div class="pokemon-image">
+              <img data-id="153" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">staryu</h1>
+            <div class="pokemon-image">
+              <img data-id="154" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">starmie</h1>
+            <div class="pokemon-image">
+              <img data-id="155" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">mr-mime</h1>
+            <div class="pokemon-image">
+              <img data-id="157" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">scyther</h1>
+            <div class="pokemon-image">
+              <img data-id="158" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">jynx</h1>
+            <div class="pokemon-image">
+              <img data-id="162" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">electabuzz</h1>
+            <div class="pokemon-image">
+              <img data-id="164" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">magmar</h1>
+            <div class="pokemon-image">
+              <img data-id="167" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">pinsir</h1>
+            <div class="pokemon-image">
+              <img data-id="169" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">tauros</h1>
+            <div class="pokemon-image">
+              <img data-id="171" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">magikarp</h1>
+            <div class="pokemon-image">
+              <img data-id="172" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">gyarados</h1>
+            <div class="pokemon-image">
+              <img data-id="173" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">lapras</h1>
+            <div class="pokemon-image">
+              <img data-id="175" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">ditto</h1>
+            <div class="pokemon-image">
+              <img data-id="176" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">eevee</h1>
+            <div class="pokemon-image">
+              <img data-id="177" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">vaporeon</h1>
+            <div class="pokemon-image">
+              <img data-id="178" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">jolteon</h1>
+            <div class="pokemon-image">
+              <img data-id="179" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">flareon</h1>
+            <div class="pokemon-image">
+              <img data-id="180" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">porygon</h1>
+            <div class="pokemon-image">
+              <img data-id="186" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">omanyte</h1>
+            <div class="pokemon-image">
+              <img data-id="189" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">omastar</h1>
+            <div class="pokemon-image">
+              <img data-id="190" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">kabuto</h1>
+            <div class="pokemon-image">
+              <img data-id="191" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">kabutops</h1>
+            <div class="pokemon-image">
+              <img data-id="192" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">aerodactyl</h1>
+            <div class="pokemon-image">
+              <img data-id="193" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">snorlax</h1>
+            <div class="pokemon-image">
+              <img data-id="196" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">articuno</h1>
+            <div class="pokemon-image">
+              <img data-id="197" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">zapdos</h1>
+            <div class="pokemon-image">
+              <img data-id="198" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">moltres</h1>
+            <div class="pokemon-image">
+              <img data-id="199" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">dratini</h1>
+            <div class="pokemon-image">
+              <img data-id="200" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">dragonair</h1>
+            <div class="pokemon-image">
+              <img data-id="201" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">dragonite</h1>
+            <div class="pokemon-image">
+              <img data-id="202" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">mewtwo</h1>
+            <div class="pokemon-image">
+              <img data-id="203" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png">
+            </div>
+          </div>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-frame">
+            <h1 class="center-text">mew</h1>
+            <div class="pokemon-image">
+              <img data-id="206" data-action="flip" class="toggle-sprite"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="lists__pokemons" id="lists__pokemons">
-        
-  </div>
-
-  <div class="buttons" id="buttons"></div>
-
 </body>
+
 </html>

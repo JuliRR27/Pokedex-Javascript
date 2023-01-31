@@ -1,49 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
-
 * {
   box-sizing: border-box;
 }
+
 body {
-  margin: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(73, 9, 121, 0.8855742125951943) 0%,
-    rgba(244, 0, 255, 1) 100%,
-    rgba(3, 153, 216, 1) 100%
-  );
-}
-button {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  font-size: 2em;
-  cursor: pointer;
-}
-.lists__pokemons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  gap: 2em;
-  padding: 1em;
-  text-align: center;
-}
-.pokemon__img {
-  border: 1px solid #ccc;
-  width: 100%;
-  border-radius: 3px;
-  margin-top: 8em;
-  color: #fff;
-  padding: 0.5em;
-}
-.pokemon__img img {
-  height: 200px;
-  width: 100%;
-  margin-top: -5em;
-}
-.buttons {
-  display: flex;
-  justify-content: center;
-  width: 200px;
-  margin: 2em auto 2em;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande',
+    sans-serif;
+  font-weight: 300;
 }
 
+#container {
+  width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#pokemon-search-form {
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#pokemon-search-input {
+  font-size: 3rem;
+  border: 3px solid #fecd2f;
+  color: #2d72fc;
+}
+
+#pokemon-logo {
+  width: 300px;
+  margin-left: 330px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.pokemon-card {
+  float: left;
+  width: 250px;
+  margin: auto;
+}
+
+.pokemon-frame {
+  width: 230px;
+  margin: 10px;
+  background: #fecd2f;
+  color: #2d72fc
+}
+
+.pokemon-image {
+  width: 96px;
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.flip-image {
+  color: #2d72fc;
+}
