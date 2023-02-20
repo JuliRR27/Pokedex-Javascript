@@ -37,13 +37,6 @@ const pokemons = [{
 
 let chosenPokemons= []; 
 
-
-
-//1--> rendering the UI from pokemon array // take the objects and draw them in the DOM 
-
-//2--> loop throght the elements in the DOM and add Event Listener that pushes the same 
-// generated element to chosenPokemons[] and delete it from the Main pokemon array[] 
-
 update();
 
 
