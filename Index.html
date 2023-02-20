@@ -25,6 +25,7 @@
     <noscript>
         <link rel="stylesheet" href="css/main.css">
     </noscript>
+    <script src="css/array.css"></script>
 </head>
 
 <body class="no-scroll" id="firstElement">
@@ -61,6 +62,24 @@
         <div id="failedToLoad">
 
         </div>
+            <section class="available">
+                <h3 class="title">Pokemon available</h3>
+                <section id="available__cards" class="cards">
+    
+    
+                </section>
+    
+            </section>
+    
+            <section  class="chosen">
+                <h3 class="title">Chosen pokemon</h3>
+                <section id="chosen__cards" class="cards">
+                   
+                </section>
+                <h4 class="chosen__totalCP">Total CP:</h4>
+            </section>
+    
+
         <div class="container">
             <div id="all_poke">
                 <div id="preload">
@@ -327,7 +346,13 @@
 
     <!-- JS -->
     <script src="js/main-dist.js"></script>
+    <script src="js/array.js"></script>
+
+    <!-- SweetAlert -->
+    <input type="text" id="name" placeholder="Enter name"><br><br>
+    <button id="startSearch">Click me</button>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/sweetalert.js"></script>
 
 </body>
-
-</html>

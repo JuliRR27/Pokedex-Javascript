@@ -2959,3 +2959,83 @@ div#infoPoke div.body-pokemon div.content-pokemon div.body-content div.content-e
 .slick-slide:focus {
     outline: none
 }
+
+
+body{
+    max-width: 1440px;
+    background:#1E1E1E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+header :is(h1,h4){
+   color: #fff; 
+   margin: 0 auto;
+   text-align: center;
+}
+
+main {
+   display: flex;
+   padding: 1rem;
+   border-radius: 15px;
+   margin: 2rem auto;
+   min-width: 800px;
+   justify-content: space-evenly;
+   background: #343c4c;
+
+}
+
+.title{
+    color: #fff;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card{
+    display: flex;
+    background: #eee;
+    border-radius: 5px;
+    transition: transform .2s;
+
+}
+.card:hover{
+    cursor:pointer;
+    opacity: .7;
+    transform: scale(1.1);
+    transition: transform .2s;
+}
+.card__img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    padding: .3rem;
+    margin: 1rem;
+    border-radius: 50%;
+    background-color: rgb(176, 180, 178);
+}
+.card__info{
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:  flex-end;
+    padding-bottom: 1rem;
+   
+}
+
+.card__info :is(h2,p){
+    margin: 0;
+}
+
+.chosen__totalCP{
+    color: #fff;
+    text-align: center;
+}
